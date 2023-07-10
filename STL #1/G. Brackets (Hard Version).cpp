@@ -13,32 +13,53 @@ string ys = "YES", no = "NO";
 void solve(){
    string s; cin >> s;
    stack <char> st;
-   for(int i = 0 ; i < s.size() ; i++){
-       if(s[i] == '(' || s[i] == '{' || s[i] == '['){
+   for(int i = 0 ; i < s.size() ; i++)
+   {
+       if(s[i] == '(' || s[i] == '{' || s[i] == '[')
+       {
            st.push(s[i]);
-       } else {
-           if(st.empty()){
+       } 
+       else 
+       {
+           if(st.empty())
+           {
                cout << "no";
                return;
-           } else {
-               if(s[i] == ')'){
-                   if(st.top() == '('){
+           } 
+           else 
+           {
+               if(s[i] == ')')
+               {
+                   if(st.top() == '(')
+                   {
                        st.pop();
-                   } else {
+                   } 
+                   else
+                   {
                        cout << "no";
                        return;
                    }
-               } else if(s[i] == '}'){
-                   if(st.top() == '{'){
+               } 
+               else if(s[i] == '}')
+               {
+                   if(st.top() == '{')
+                   {
                        st.pop();
-                   } else {
+                   } 
+                   else 
+                   {
                        cout << "no";
                        return;
                    }
-               } else if(s[i] == ']'){
-                   if(st.top() == '['){
+               } 
+               else if(s[i] == ']')
+               {
+                   if(st.top() == '[')
+                   {
                        st.pop();
-                   } else {
+                   } 
+                   else 
+                   {
                        cout << "no";
                        return;
                    }
